@@ -46,9 +46,20 @@ public class EchoClient {
                 break;
             }
 
-            switch (line) {
-                case "@help" -> msgs.helpMsg();
-                default -> out.println("[" + screenName + "]: " + line);
+            String firtElementInLine = line.split(" ")[0];
+
+            switch (firtElementInLine) {
+                case "@help":
+                    msgs.helpMsg();
+                    break;
+                case "@echo":
+                    if (line.length() > 6) {
+                        out.println("[" + screenName + "]: " + line.substring(6));
+                    } else {
+                        System.out.println("msg not found. Use '@help' for help");
+                    }
+                    break;
+
             }
 
         }

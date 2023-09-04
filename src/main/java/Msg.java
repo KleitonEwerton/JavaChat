@@ -10,6 +10,6 @@
 public class Msg {
 
     public void helpMsg() {
-        System.out.println(" - '@help' : for help \n - '@quit' : for quit \n - '@echo' : for broadcast mensage");
+        System.out.println(" - '@help' : for help \n - '@quit' : for quit \n - '@echo msg' : for broadcast mensage 'masg' = mesage");
     }
 }
